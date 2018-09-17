@@ -1,11 +1,4 @@
-% 
-% exemplo genérico de uso da classe iiufrgs.cls
-% $Id: iiufrgs.tex,v 1.1.1.1 2005/01/18 23:54:42 avila Exp $
-% 
-% This is an example file and is hereby explicitly put in the
-% public domain.
-% 
-\documentclass[cic,tc]{inputs/iiufrgs}
+\documentclass[cic,tc]{iiufrgs}
 
 % Use unicode
 \usepackage[utf8]{inputenc}   % pacote para acentuação
@@ -22,16 +15,12 @@
 % 
 % Informações gerais
 % 
-\title{Um Exemplo de Monografia do Instituto de Informática da UFRGS}
+\title{Planejando Viagens: Desenvolvimento do sistema web para planejamento de viagens}
 
-\author{Flaumann}{Fritz Gutenberg}
-% alguns documentos podem ter varios autores:
-% \author{Flaumann}{Frida Gutenberg}
-% \author{Flaumann}{Klaus Gutenberg}
+\author{de Souza La Porta}{Henrique}
 
 % orientador e co-orientador são opcionais (não diga isso pra eles :))
-\advisor[Prof.~Dr.]{Lamport}{Leslie}
-\coadvisor[Prof.~Dr.]{Knuth}{Donald Ervin}
+\advisor[Prof.~Dr.]{Soares Pimenta}{Marcelo}
 
 % a data deve ser a da defesa; se nao especificada, são gerados
 % mes e ano correntes
@@ -161,150 +150,28 @@
 % aqui comeca o texto propriamente dito
 
 % introducao
+
 \chapter{Introdução}
-No início dos tempos, Donald E. Knuth criou o \TeX. Algum tempo depois, Leslie Lamport criou o \LaTeX. Graças a eles, não somos obrigados a usar o Word nem o LibreOffice.
-
-\section{Figuras e tabelas}
-
-Esta seção faz referência às Figuras~\ref{fig:estrutura},~\ref{fig:ex1} e~\ref{fig:ex2}, a título de exemplo. A primeira figura apresenta a estrutura de uma figura. A \emph{descrição} deve aparecer \textbf{acima} da figura. Abaixo da figura, deve ser indicado a origem da imagem, mesmo se essa for apenas os autores do texto.
-
-A Figura~\ref{fig:ex1} representa o caso mais comum, onde a figura propriamente dita é importada de um arquivo ( neste exemplo o formato é \texttt{eps} ou \texttt{pdf}. Veja a seção \ref{sec:fig_format}). A Figura~\ref{fig:ex2} exemplifica o uso do environment \texttt{picture}, para desenhar usando o próprio~\LaTeX.
-
-\begin{figure}[h]
-    \caption{Descrição da Figura deve ir no topo}
-    \begin{center}
-        % Aqui vai um includegraphics , um picture environment ou qualquer
-        % outro comando necessário para incorporar o formato de imagem
-        % utilizado.        
-        \begin{picture}(100,100)
-            \put(0,0){\line(0,1){100}}
-            \put(0,0){\line(1,0){100}}
-            \put(100,100){\line(0,-1){100}}
-            \put(100,100){\line(-1,0){100}}
-            \put(10,50){Uma Imagem}
-        \end{picture}    
-    \end{center}
-    \label{fig:estrutura}
-    \legend{Fonte: Os Autores}
-\end{figure}
-
-\begin{figure}
-    \caption{Exemplo de figura importada de um arquivo e também exemplo de caption muito grande que ocupa mais de uma linha na Lista~de~Figuras}
-    \begin{center}
-        \includegraphics[width=8em]{fig}
-    \end{center}
-    \legend{Fonte: Os Autores}
-    \label{fig:ex1}
-\end{figure}
-
-% o `[h]' abaixo é um parâmetro opcional que sugere que o LaTeX coloque a
-% figura exatamente neste ponto do texto. Somente preocupe-se com esse tipo
-% de formatação quando o texto estiver completamente pronto (uma frase a mais
-% pode fazer o LaTeX mudar completamente de idéia sobre onde colocar as
-% figuras e tabelas)
-% \begin{figure}[h]
-\begin{figure}
-    \caption{Exemplo de figura desenhada com o environment \texttt{picture}.}
-    \begin{center}
-        \setlength{\unitlength}{.1em}
-        \begin{picture}(100,100)
-            \put(20,20){\circle{20}}
-            \put(20,20){\small\makebox(0,0){a}}
-            \put(80,80){\circle{20}}
-            \put(80,80){\small\makebox(0,0){b}}
-            \put(28,28){\vector(1,1){44}}
-        \end{picture}
-    \end{center}
-    \legend{Fonte: Os Autores}
-    \label{fig:ex2}
-\end{figure}
-
-Tabelas são construídas com praticamente os mesmos comandos. Ver a tabela \ref{tbl:ex1}.
-
-\begin{table}[h]
-    \caption{Uma tabela de Exemplo}
-    % OBS: não use \begin{center}, pois este aumenta o espaçamento entre a caption/legend e a tabela
-    % Para figuras, a aparência é melhor com o espaçamento extra
-    \centering
-        \begin{tabular}{c|c|p{5cm}}
-          \hline
-          \textit{Col 1}  &   \textit{Col 2}  &   \textit{Col 3} \\
-          \hline
-          \hline
-          Val 1           &   Val 2           & Esta coluna funciona como um parágrafo, tendo uma margem definida em 5cm. Quebras de linha funcionam como em qualquer parágrafo do tex. \\
-          Valor Longo     & Val 2             & Val 3 \\
-          \hline
-        \end{tabular}
-    \legend{Fonte: Os Autores}
-    \label{tbl:ex1}
-\end{table}
-
-\subsection{Formato de Figuras}
-\label{sec:fig_format}
-
-O LaTeX permite utilizar vários formatos de figuras, entre eles \emph{eps}, \emph{pdf}, \emph{jpeg} e \emph{png}. Programas de diagramação como Inkscape (e mesmo LibreOffice) permitem gerar arquivos de imagens vetoriais que podem ser utilizados pelo LaTeX sem dificuldade. Pacotes externos permitem utilizar SVG e outros formatos.
-
-Dia e xfig são programas utilizados por dinossauros para gerar figuras vetoriais. Se possível, evite-os.
-
-\subsection{Classificação dos etc.}
-
-O formato do instituo de informática define 5 níveis: capítulo, seção, subseção e outros 2 sem nome.
-
-\subsubsection{Subsubseção}
-Exemplo de uma subsubseção.
-
-\paragraph{Parágrafo}
-Exemplo de um parágrafo.
-
-\section{Sobre as referências bibliográficas}
-
-A classe \emph{iiufrgs} faz uso do pacote \emph{abnTeX2} com algumas alterações
-feitas por Sandro Rama Fiorini. Culpe ele se algo der errado. Agradeça a ele
-pelo que der certo. As modificações dão uma camada de tinta NATBIB-style,
-já que o abntex2 usa uns comandos de citação feitos para alienígenas de 5 braços
-wtf. Exemplos de citação:
-
-\begin{itemize}
-    \item \emph{cite}: Unicórnios são verdes \cite{Adams2009Conceptual};
-    \item \emph{citep}:Unicórnios são verdes \citep{Adams2009Conceptual};
-    \item \emph{citet}: Segundo \citet{Adams2009Conceptual}, unicórnios são
-    verdes.
-    \item \emph{citen or citenum}: Segundo \citen{Adams2009Conceptual},
-    unicórnios são verdes.
-    \item \emph{citeauthor e citeyearpar}: Segundo artigos de
-    \citeauthor{Adams2009Conceptual} , unicórnios são verdes
-    \citeyearpar{Adams2009Conceptual}.
-
-\end{itemize}
-
-O estilo abnt fornecido antigamente pelo UTUG não é mais recomendado, pois não
-produz saída de acordo com as exigências da biblioteca.
-
-Recomenda-se o uso de bibtex para gerenciar as referências (veja o arquivo
-biblio.bib).
-
-\section{Mais uma Seção}
-
-Agora vamos fazer várias seções para termos valores de 2 dígitos no \contentsname.
-
-\section{Mais uma Seção}
-\section{Mais uma Seção}
-\section{Mais uma Seção}
-\section{Mais uma Seção}
-\section{Mais uma Seção}
-\section{Mais uma Seção}
-\section{Mais uma Seção}
-\section{Mais uma Seção}
-\section{Mais uma Seção}
 
 
-% e aqui vai a parte principal
-% 
-% \chapter{Estado da arte}
-% \chapter{Mais estado da arte}
-% \chapter{A minha contribuição}
-% \chapter{Prova de que a minha contribuição é válida}
-% \chapter{Conclusão}
+\chapter{O Problema}
+
+Atualmente o planejamento de viagens por conta própria, sem necessidade da intervenção de agências de viagens, tem se tornado cada vez mais popular e acessível devido a grande quantidade de informações disponíveis na internet. Porém, para alguns viajantes surge a dificuldade de organizar esse grande volume de dados e os possíveis custos envolvidos, principalmente quando as viagens são longas, incluem mais de um destino e envolvem mais de uma pessoa. Além disso, outra dificuldade é armazenar as diversas informações que serão necessárias durante a viagem de forma prática e acessível.
+
+Dentro desse contexto existe o blog Planejando Viagens, que tem como objetivo ajudar outros viajantes a planejar viagens, através da disponibilização de informações e dicas sobre diversos lugares do mundo. Atualmente os autores do blog utilizam tabelas de Excel como a principal forma de organização de informações durante o planejamento de suas viagens. Entre os dados utilizados estão informações sobre cidades, datas, hospedagem, transportes, atrações turísticas, previsão de custos, entre outros, que são impressos posteriormente para consulta durante a viagem. O controle de custos ao longo da viagem é feito através de anotações no papel feitas diariamente. Nesse processo informações podem ser perdidas ou esquecidas, além de não existir uma facilidade de acesso remoto das informações a qualquer momento.
+
+O desenvolvimento do sistema web de planejamento de viagens tem como foco facilitar a organização de informações referentes a roteiros de viagem, hospedagens, transportes, além da criação de estimativas de gastos. Todas essas informações serão editáveis pelo usuário, existindo a possibilidade de adicionar novos dados ao longo do tempo, como os gastos reais que estiverem ocorrendo durante a viagem. Portanto, se tornando uma plataforma que possibilita o planejamento e a organização de todos os aspectos de uma viagem antes, durante e depois da realização da mesma. Além disso, podendo também ser usado como uma ferramenta de controle de gastos durante viagens.
+
+
+\chapter{Estado da Arte}
+
+\chapter{A Proposta}
+
+\chapter{Conclusões}
+
+\chapter{Referências Bibliográficas}
+
+\chapter{Anexos}
 
 % referências
 % aqui será usado o environment padrao `thebibliography'; porém, sugere-se

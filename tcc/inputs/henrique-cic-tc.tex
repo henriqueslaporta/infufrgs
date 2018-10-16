@@ -131,11 +131,8 @@
 % lista de abreviaturas e siglas
 % o parametro deve ser a abreviatura mais longa
 \begin{listofabbrv}{SPMD}
-    \item[SMP] Symmetric Multi-Processor
-    \item[NUMA] Non-Uniform Memory Access
-    \item[SIMD] Single Instruction Multiple Data
-    \item[SPMD] Single Program Multiple Data
-    \item[ABNT] Associação Brasileira de Normas Técnicas
+    \item[JWT] 
+
 \end{listofabbrv}
 
 % idem para a lista de símbolos
@@ -160,12 +157,26 @@ Atualmente o planejamento de viagens por conta própria, sem necessidade da inte
 
 Dentro desse contexto existe o blog Planejando Viagens, que tem como objetivo ajudar outros viajantes a planejar viagens, através da disponibilização de informações e dicas sobre diversos lugares do mundo. Atualmente os autores do blog utilizam tabelas de Excel como a principal forma de organização de informações durante o planejamento de suas viagens. Entre os dados utilizados estão informações sobre cidades, datas, hospedagem, transportes, atrações turísticas, previsão de custos, entre outros, que são impressos posteriormente para consulta durante a viagem. O controle de custos ao longo da viagem é feito através de anotações no papel feitas diariamente. Nesse processo informações podem ser perdidas ou esquecidas, além de não existir uma facilidade de acesso remoto das informações a qualquer momento.
 
-O desenvolvimento do sistema web de planejamento de viagens tem como foco facilitar a organização de informações referentes a roteiros de viagem, hospedagens, transportes, além da criação de estimativas de gastos. Todas essas informações serão editáveis pelo usuário, existindo a possibilidade de adicionar novos dados ao longo do tempo, como os gastos reais que estiverem ocorrendo durante a viagem. Portanto, se tornando uma plataforma que possibilita o planejamento e a organização de todos os aspectos de uma viagem antes, durante e depois da realização da mesma. Além disso, podendo também ser usado como uma ferramenta de controle de gastos durante viagens.
-
-
 \chapter{Estado da Arte}
+Google travel
+
+Inspirirock
 
 \chapter{A Proposta}
+Desenvolvendo o sistema web
+
+Neste capitulo será proposto um sistema com o objetivo de facilitar a organização de informações referentes a roteiros de viagem, hospedagem, transportes, além da criação da estimativas de gastos. Todas essas informações serão editáveis pelo usuário, existindo a possibilidade de adicionar novos dados ao longo do tempo, como os gastos reais que estiverem ocorrendo durante a viagem. Portanto, se tornando uma plataforma que possibilita o planejamento, organização e o controle de todas as informações de uma viagem antes, durante e depois da realização da mesma. 
+
+\section{Tecnologias utilizadas}
+Para que o projeto fosse desenvolvido foi necessário fazer escolhas de quais tecnologias utilizadas para o desenvolvimento tanto do \textit{back-end} como do \textit{front-end}.
+
+No \textit{back-end} foi utilizado o Strapi um CMS (Content Management Framework) para facilitar o desenvolvimento de API's em \textit{Node.js}, provendo recursos como: Painel de administração, controle de autenticação e permissões, geradores de API, etc. O Strapi é gratuito e \textit{open-source}, podendo ser customizado e estendido livremente. O Strapi agiliza o processo de desenvolvimento, pois provem a criação de tabelas e gerenciamento de autenticação de usuários via JWT.
+
+Para o front-end foi utilizado o framework Nuxt para aplicações em Vue.js.
+
+\section{Protótipos de baixa fidelidade}
+Com objetivo de obter uma visão geral de como desenvolveria a estrutura do front-end do projeto e suas necessidades, foi realizado protótipos de baixa fidelidade, isto é, são protótipos que apresentam a estrutura visual do que se deseja como conceito de funcionamento, mas não trás detalhes de interface como cores, padrões e etc.
+
 
 \chapter{Conclusões}
 

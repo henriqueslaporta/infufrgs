@@ -165,7 +165,38 @@ Inspirirock
 \chapter{A Proposta}
 Desenvolvendo o sistema web
 
-Neste capitulo será proposto um sistema com o objetivo de facilitar a organização de informações referentes a roteiros de viagem, hospedagem, transportes, além da criação da estimativas de gastos. Todas essas informações serão editáveis pelo usuário, existindo a possibilidade de adicionar novos dados ao longo do tempo, como os gastos reais que estiverem ocorrendo durante a viagem. Portanto, se tornando uma plataforma que possibilita o planejamento, organização e o controle de todas as informações de uma viagem antes, durante e depois da realização da mesma. 
+Neste capitulo será proposto um sistema com o objetivo de facilitar a organização de informações referentes a roteiros de viagem, hospedagem, transportes, além da criação da estimativas de gastos. Todas essas informações serão editáveis pelo usuário, existindo a possibilidade de adicionar novos dados ao longo do tempo, como os gastos reais que ocorrem durante a viagem. Portanto, se tornando uma plataforma de planejamento, organização e o controle de todas as informações de uma viagem antes, durante e depois da realização da mesma. 
+
+\section{Requisitos e objetivos}
+
+Afim de esclarecer e identificar os objetivos do software, foi realizado o levantamento dos requisitos junto aos proprietários do blog Planejando Viagens.
+
+Definiu-se, portanto que a aplicação deve:
+
+\begin{itemize}
+    \item Permitir a construção e edição de roteiros, através da definição de destinos e locais definidos pelo usuário.
+    \item Permitir o inserção e edição de hospedagens no roteiro.
+    \item Permitir o inserção e edição de passagens no roteiro, sejam aéreas, terrestres, marítimas e etc.
+    \item Permitir o inserção, controle e edição de gastos que ocorrem ou podem vir a ocorrer, na execução de um roteiro.
+    \item Possibilitar ao usuário a apresentação do roteiro em um mapa, usando os pontos definidos no roteiro.
+    \item Permitir que os roteiros sejam armazenados no sistema.
+    \item Ter interface responsiva, ou seja, uma interface prática e adaptável a qualquer dispositivo que a acesse seja smartphone, tablet ou pc.
+
+\end{itemize}
+
+\section{Protótipos de baixa fidelidade}
+Com objetivo de obter uma visão geral de como desenvolveria a estrutura do front-end do projeto e suas necessidades, foi realizado protótipos de baixa fidelidade, isto é, são protótipos que apresentam a estrutura visual do que se deseja como conceito de funcionamento, mas não trás detalhes de interface como cores, padrões e etc.
+
+\section{Entidades}
+Este projeto trabalha com um grupo pequeno de entidades que se resumem às instâncias mais básicas planejadas para a aplicação. A primeira delas representa um destino, ou seja um local ou um endereço a ser visitado no mapa, e portanto deve possuir atributos
+referentes a sua localização, sua identificação, ao estado e prioridade. Um objeto Destino
+é composto dos seguintes atributos:
+\begin{figure}[htp]
+\centering
+\includegraphics[width=15cm]{tcc/imagens/entidades.png}
+\caption{Diagrama de Entidade-Relacionamento}
+\label{fig:lion}
+\end{figure}
 
 \section{Tecnologias utilizadas}
 Para que o projeto fosse desenvolvido foi necessário fazer escolhas de quais tecnologias utilizadas para o desenvolvimento tanto do \textit{back-end} como do \textit{front-end}.
@@ -174,8 +205,6 @@ No \textit{back-end} foi utilizado o Strapi um CMS (Content Management Framework
 
 Para o front-end foi utilizado o framework Nuxt para aplicações em Vue.js.
 
-\section{Protótipos de baixa fidelidade}
-Com objetivo de obter uma visão geral de como desenvolveria a estrutura do front-end do projeto e suas necessidades, foi realizado protótipos de baixa fidelidade, isto é, são protótipos que apresentam a estrutura visual do que se deseja como conceito de funcionamento, mas não trás detalhes de interface como cores, padrões e etc.
 
 
 \chapter{Conclusões}
